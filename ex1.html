@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <link rel="stylesheet" href="ex1.css">
+</head>
+
+<body>
+    
+    <script>
+
+        function exibir() {
+            let text = ''
+
+            document.getElementById("Mostrar").innerHTML = ""
+            for (let num = 0; num < 5001; num++ ){
+
+                let resultado = num % 2
+                
+                if (resultado == 0 ) //par
+                {
+                    text = document.createTextNode(num + ' - ')
+                    document.getElementById("Mostrar").appendChild(text)
+                }
+            }
+
+        }
+        
+    </script>
+
+    <h3>Clique para ver os números pares de 1 a 5000</h3>
+    <button onclick="exibir()" id="numeros">Mostrar</button>
+    <p id="Mostrar"> </p>
+    
+</body>
+
+</html>
